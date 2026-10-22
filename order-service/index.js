@@ -18,7 +18,7 @@ app.delete('/cancelorder', (req, res) => {
 app.post('/addorder', async (req, res) => {
     try {
         // Step 1: Call Payment API
-        const paymentResponse = await axios.post('http://localhost:3003/paymentprocess', req.body);
+        const paymentResponse = await axios.post('http://35.173.228.130:3003/paymentprocess', req.body);
         const paymentResult = paymentResponse.data;
 
         // Step 2: Determine Notification payload based on payment outcome
